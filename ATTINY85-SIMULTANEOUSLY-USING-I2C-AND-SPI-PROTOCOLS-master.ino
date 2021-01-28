@@ -204,19 +204,19 @@ ISR(TIMER1_COMPA_vect)
   #else
   // Cathodes scanning
   // Uncomment to adjust your constant brightness level
-  // 8 ticks x interrupt interval time - or 181.8us x 8 = 1.4544 ms (6.875Kz)
+  // Bit weight 2^0 of BAM_Bit
   // DIY_SPI(matrixBuffer[0][level + 0]);
   // DIY_SPI(matrixBuffer[0][level + 1]);
   
-  // 24 ticks x interrupt interval time - or 181.8us x 24 = 4.3632 ms (2.29Kz)
+  // Bit weight 2^1 of BAM_Bit
    DIY_SPI(matrixBuffer[1][level + 0]);
    DIY_SPI(matrixBuffer[1][level + 1]);
 
-  // 56 ticks x interrupt interval time - or 181.8us x 56 = 10.1808 ms (0.98Kz)
+  // Bit weight 2^2 of BAM_Bit
   // DIY_SPI(matrixBuffer[2][level + 0]);
   // DIY_SPI(matrixBuffer[2][level + 1]);
   
-  // 120 ticks x interrupt interval time - or 181.8us x 120 = 21.816 ms (0.457Kz)  
+  // Bit weight 2^3 of BAM_Bit  
   // DIY_SPI(matrixBuffer[3][level + 0]);
   // DIY_SPI(matrixBuffer[3][level + 1]);
   #endif
